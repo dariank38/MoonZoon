@@ -1,58 +1,23 @@
 {
-    "rust-analyzer.linkedProjects": [
-        // rust-analyzer ignores `main.rs` when `linkedProjects` are set
-        "crates/mzoon/Cargo.toml",
-        // examples are ignored because they have own workspaces
-        // "examples/align/Cargo.toml",
-        // "examples/align_content/Cargo.toml",
-        // "examples/blocking_task/Cargo.toml",
-        // "examples/canvas/Cargo.toml",
-        // "examples/chat/Cargo.toml",
-        "examples/counter/Cargo.toml",
-        // "examples/counters/Cargo.toml",
-        // "examples/custom_config/Cargo.toml",
-        // "examples/custom_http_client/Cargo.toml",
-        // "examples/image/Cargo.toml",
-        // "examples/js_text_editor/Cargo.toml",
-        // "examples/js_framework_benchmark/Cargo.toml",
-        // "examples/keyboard/Cargo.toml",
-        // "examples/layers/Cargo.toml",
-        // "examples/local_search/Cargo.toml",
-        // "examples/markup/Cargo.toml",
-        // "examples/minesweeper/Cargo.toml",
-        // "examples/pages/Cargo.toml",
-        // "examples/pan_zoom/Cargo.toml",
-        // "examples/paragraph/Cargo.toml",
-        // "examples/resize_drag/Cargo.toml",
-        // "examples/row_wrap/Cargo.toml",
-        // "examples/signal_params/Cargo.toml",
-        // "examples/slider/Cargo.toml",
-        // "examples/spinner/Cargo.toml",
-        // "examples/start_with_app/Cargo.toml",
-        // "examples/svg/Cargo.toml",
-        // "examples/text_area/Cargo.toml",
-        // "examples/time_tracker/Cargo.toml",
-        // "examples/timer/Cargo.toml",
-        // "examples/todomvc/Cargo.toml",
-        // "examples/tweened/Cargo.toml",
-        // "examples/video/Cargo.toml",
-        // "examples/viewport/Cargo.toml",
-        // "examples/wasm_components/Cargo.toml",
-        // "examples/web_components/Cargo.toml",
-        // "examples/web_workers/Cargo.toml",
-    ],
-    "rust-analyzer.diagnostics.disabled": [
-        "missing-unsafe",
-        "add-reference-here",
-    ],
-    "rust-analyzer.procMacro.enable": true,
-    "rust-analyzer.completion.autoimport.enable": false,
-    "rust-analyzer.cargo.extraEnv": {
-        "CARGO_PROFILE_RUST_ANALYZER_INHERITS": "dev"
-    },
-    "rust-analyzer.cargo.extraArgs": [
-        "--profile",
-        "rust-analyzer"
-    ],
-    "rust-analyzer.cargo.features": ["zoon/frontend_multithreading"],
+  "search.exclude": {
+    "**/.sst": true
+  },
+  "task.allowAutomaticTasks": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "debug.openDebug": "neverOpen",
+  "problems.autoReveal": true,
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.inheritEnv": false,
+  "jestrunner.configPath": "jest.unit.config.cjs",
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
 }
